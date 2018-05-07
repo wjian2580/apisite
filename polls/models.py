@@ -12,6 +12,7 @@ class Question(models.Model):
 
 	def day_before(self):
 		return timezone.now() - datetime.timedelta(days=1) <= self.pub_date <= timezone.now()
+		day_before.short_description = 'Published recently?'
 
 class Choice(models.Model):
 
